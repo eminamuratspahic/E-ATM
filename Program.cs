@@ -9,6 +9,7 @@ namespace E_ATM
             Console.WriteLine("Hello World!");
             Console.WriteLine("Emina här");
             Console.WriteLine("Å Enes med");
+            Console.WriteLine("Emina äter");
         }
     }
 }
