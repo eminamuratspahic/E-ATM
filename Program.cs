@@ -1,0 +1,13 @@
+﻿using System;
+
+namespace E_ATM
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            Console.WriteLine("Emina här");
+        }
+    }
+}
