@@ -1,3 +1,5 @@
+using System;
+
 namespace E_ATM
 {
     public class BankClass:IBank
@@ -8,7 +10,9 @@ namespace E_ATM
 
         int IBank.amoountOfWithdrawn { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
         int IBank.maxAmount { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        int IBank.amountOfMoney { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        int IBank.amountOfMoney { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }           
+             
+
 
         public BankClass()
         {
@@ -21,7 +25,7 @@ namespace E_ATM
 
         public void Withdrawn()
         {
-
+          //  amoountOfWithdrawn = int.Parse(Console.ReadLine());
 
         }
 

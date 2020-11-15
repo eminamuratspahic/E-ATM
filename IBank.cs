@@ -5,6 +5,7 @@ namespace E_ATM
         int amoountOfWithdrawn { get; set; }
         int maxAmount { get; set; }
         int amountOfMoney { get; set; }
+        
         //void Registration()  
     } 
     

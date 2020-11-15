@@ -6,6 +6,8 @@ namespace E_ATM
     {
         static void Main(string[] args)
         {
+
+            MenuClass menuClass = new MenuClass();
             //test
             LoginClass loginClass = new LoginClass();
             loginClass.cardNum = 123;
@@ -17,6 +19,10 @@ namespace E_ATM
             if(isPinCorrect)
             {
                 Console.WriteLine("Rätt kod");
+                
+                menuClass.Menu(); 
+                
+                
             }else
             {
                 Console.WriteLine("Fel kod");
@@ -48,10 +54,6 @@ namespace E_ATM
             */
 
 
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Emina här");
-            Console.WriteLine("Å Enes med");
-            Console.WriteLine("Emina äter...Vad?");
         }
     }
 }
