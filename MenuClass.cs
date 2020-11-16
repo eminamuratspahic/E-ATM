@@ -4,6 +4,8 @@ namespace E_ATM {
 
     public class MenuClass {
 
+        public string choice;
+
         BankClass bankClass = new BankClass();
 
         public enum MenuChoices {
@@ -26,29 +28,29 @@ namespace E_ATM {
                     Console.WriteLine (index + ": " + str);
                 }
 
-                Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
-                string value = Console.ReadLine ();
+                // Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
+                // string value = Console.ReadLine ();
 
-                if (!int.TryParse (value, out int output)) {
+                if (!int.TryParse (choice, out int output)) {
 
                     Console.WriteLine ("Valet ska anges i siffervärde, möjliga val 1-2-3.");
-                    Console.WriteLine ("Tryck valfitt knapp får att gå vidare...");
+                    Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
                     Console.ReadKey ();
                 } else {
-                    MenuChoices MenuChoice = (MenuChoices) Enum.Parse (typeof (MenuChoices), value);
+                    MenuChoices MenuChoice = (MenuChoices) Enum.Parse (typeof (MenuChoices), choice);
 
                     switch (MenuChoice) {
                         case MenuChoices.UTTAG:
                             Console.WriteLine ("UTTAG");
 
                             bankClass.Withdrawn();
-                            Console.WriteLine ("Tryck valfitt knapp får att gå vidare...");
+                            Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
                             Console.ReadKey ();
                             break;
 
                         case MenuChoices.TRANSAKTIONSHISTORIK:
                             Console.WriteLine ("TRANSAKTIONSHISTORIK");
-                            Console.WriteLine ("Tryck valfitt knapp får att gå vidare...");
+                            Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
                             Console.ReadKey ();
                             break;
 
@@ -59,7 +61,7 @@ namespace E_ATM {
 
                         default:
                             Console.WriteLine ("Felaktig val, försök igen.");
-                            Console.WriteLine ("Tryck valfitt knapp får att gå vidare...");
+                            Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
                             Console.ReadKey ();
                             break;
                     }

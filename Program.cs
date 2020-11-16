@@ -18,9 +18,11 @@ namespace E_ATM
 
             if(isPinCorrect)
             {
-                Console.WriteLine("Rätt kod");
+                //Console.WriteLine("Rätt kod");
                 
-                menuClass.Menu(); 
+
+  Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
+		 menuClass.choice = Console.ReadLine ();
                 
                 
             }else
