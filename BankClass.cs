@@ -2,30 +2,58 @@ using System;
 
 namespace E_ATM
 {
-    public class BankClass:IBank
+    public class BankClass : IBank
     {
-        public int amoountOfWithdrawn;
-        public int maxAmount;
-        public int amountOfMoney;
 
-        int IBank.amoountOfWithdrawn { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        int IBank.maxAmount { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        int IBank.amountOfMoney { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }           
-             
-
+        public int amountOfWithdrawn { get; set; }
+        public int maxAmount { get; set; }
+        public double amountOfMoney { get; set; }
+        public double amount { get; set; }
 
         public BankClass()
         {
         }
 
-        public void CheckAmountOfMoney()
+        public double CheckAmountOfMoney()
         {
-
+            return amountOfMoney;
         }
 
-        public void Withdrawn()
+        public bool Withdrawn(double amount)
         {
-          //  amoountOfWithdrawn = int.Parse(Console.ReadLine());
+
+            try
+            {
+                amountOfMoney -= amount;
+            }
+            catch (Exception e)
+            { throw new Exception(e.Message); }
+
+
+            if (amount <= amountOfMoney)
+            {
+                amountOfMoney -= amount;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+        public double Deposit(double amount)
+        {
+
+            try
+            {
+                amountOfMoney += amount;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return amountOfMoney;
 
         }
 

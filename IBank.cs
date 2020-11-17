@@ -1,10 +1,10 @@
 namespace E_ATM
 {   
-    interface IBank
+    public interface IBank
     {
-        int amoountOfWithdrawn { get; set; }
+        int amountOfWithdrawn { get; set; }
         int maxAmount { get; set; }
-        int amountOfMoney { get; set; }
+        double amountOfMoney { get; set; }
         
         //void Registration()  
     } 

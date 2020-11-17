@@ -1,68 +1,95 @@
 using System;
 
-namespace E_ATM {
+namespace E_ATM
+{
 
-    public class MenuClass {
+    public class MenuClass
+    {
 
         public string choice;
 
         BankClass bankClass = new BankClass();
 
-        public enum MenuChoices {
+        public enum MenuChoices
+        {
 
             UTTAG = 1,
             TRANSAKTIONSHISTORIK,
+            INSÄTTNING,
             AVSLUTA
 
         }
-        public void Menu () {
-            while (true) {
+        public void Menu()
+        {
+            while (true)
+            {
 
-                Console.Clear ();
+                Console.Clear();
                 int index = 0;
-                Console.WriteLine ("E-ATM\n");
+                Console.WriteLine("E-ATM\n");
 
-                foreach (string str in Enum.GetNames (typeof (MenuChoices))) {
+                foreach (string str in Enum.GetNames(typeof(MenuChoices)))
+                {
                     index++;
 
-                    Console.WriteLine (index + ": " + str);
+                    Console.WriteLine(index + ": " + str);
                 }
 
                 // Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
                 // string value = Console.ReadLine ();
 
-                if (!int.TryParse (choice, out int output)) {
+                if (!int.TryParse(choice, out int output))
+                {
 
-                    Console.WriteLine ("Valet ska anges i siffervärde, möjliga val 1-2-3.");
-                    Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
-                    Console.ReadKey ();
-                } else {
-                    MenuChoices MenuChoice = (MenuChoices) Enum.Parse (typeof (MenuChoices), choice);
+                    Console.WriteLine("Valet ska anges i siffervärde, möjliga val 1-2-3.");
+                    Console.WriteLine("Tryck valfritt knapp får att gå vidare...");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    MenuChoices MenuChoice = (MenuChoices)Enum.Parse(typeof(MenuChoices), choice);
 
-                    switch (MenuChoice) {
+                    switch (MenuChoice)
+                    {
                         case MenuChoices.UTTAG:
-                            Console.WriteLine ("UTTAG");
+                            Console.WriteLine("UTTAG");
 
-                            bankClass.Withdrawn();
-                            Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
-                            Console.ReadKey ();
+                            Console.WriteLine("Tryck valfritt knapp får att gå vidare...");
+                            double money = Convert.ToDouble(Console.ReadLine());
+                            bool withdraw = bankClass.Withdrawn(money);
+                            if(withdraw)
+                            {
+                                Console.WriteLine($"Ditt tog ut {money} kr! Ditt nya belopp är {bankClass.amountOfMoney}");
+                            }else
+                            {
+                                Console.WriteLine("Du har skrivit in ett ogiltigt belopp!");
+                            }
+
+
                             break;
 
                         case MenuChoices.TRANSAKTIONSHISTORIK:
-                            Console.WriteLine ("TRANSAKTIONSHISTORIK");
-                            Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
-                            Console.ReadKey ();
+                            Console.WriteLine("TRANSAKTIONSHISTORIK");
+                            Console.WriteLine("Tryck valfritt knapp får att gå vidare...");
+                            Console.ReadKey();
                             break;
 
+                        case MenuChoices.INSÄTTNING:
+                            Console.Write("Var god och ange insättningsbeloppet:");
+                            double amountOfMoney2 = double.Parse(Console.ReadLine());
+                            double newBalance = bankClass.Deposit(amountOfMoney2);
+                            Console.WriteLine($"Ditt nya belopp: {newBalance}");
+                            break;
+                            
                         case MenuChoices.AVSLUTA:
-                            Console.WriteLine ("LOGGA UT");
-                            Environment.Exit (0);
+                            Console.WriteLine("LOGGA UT");
+                            Environment.Exit(0);
                             break;
 
                         default:
-                            Console.WriteLine ("Felaktig val, försök igen.");
-                            Console.WriteLine ("Tryck valfritt knapp får att gå vidare...");
-                            Console.ReadKey ();
+                            Console.WriteLine("Felaktig val, försök igen.");
+                            Console.WriteLine("Tryck valfritt knapp får att gå vidare...");
+                            Console.ReadKey();
                             break;
                     }
                 }
