@@ -12,26 +12,30 @@ namespace E_ATM
             LoginClass loginClass = new LoginClass();
             loginClass.cardNum = 123;
             loginClass.pinNum = 111;
-            Console.WriteLine("Välkommen till E-ATM!");
-            Console.WriteLine("Skriv in ditt kortnummer!");
+            Console.WriteLine("Skriv in ditt kortnummer");
             int pin = 0;
-            int card = 0;
-            
-            // metod för inloggning kortnr
-            Console.WriteLine(loginClass.VerifyCardNumber(card));
+/*             int pin = int.Parse(Console.ReadLine());
+            bool isPinCorrect = loginClass.VerifyCardNumber(pin);
 
-            // metod för inloggning pin
-            Console.WriteLine(loginClass.VerifyPin(pin));
-            
-            menuClass.ShowMenu();
-                
-
-
-
+            if (isPinCorrect)
+            {
+                Console.WriteLine("Rätt kod");
+            }
+            else
+            {
+                Console.WriteLine("Fel kod");
+            } */
 
 
+                Console.WriteLine(loginClass.CheckAmountOfTries(pin));
 
-            /*             
+
+
+
+
+
+
+            /*             Console.WriteLine("Välkommen till E-ATM");
                         Console.WriteLine("Ange ditt kortnummer");
                         int input = Convert.ToInt32(Console.ReadLine()); */
 

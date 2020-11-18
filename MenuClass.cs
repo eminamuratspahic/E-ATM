@@ -19,9 +19,12 @@ namespace E_ATM
             AVSLUTA
 
         }
-        public void ShowMenu()
+        public void Menu()
         {
+<<<<<<< HEAD
             int amountOfWithdrawnsLeft = 5;
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
             while (true)
             {
 
@@ -36,11 +39,15 @@ namespace E_ATM
                     Console.WriteLine(index + ": " + str);
                 }
 
-                 Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
-                 string choice = Console.ReadLine ();
+                // Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
+                // string value = Console.ReadLine ();
 
+<<<<<<< HEAD
                int intChoice; 
                     if (!int.TryParse(choice, out intChoice))
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
                 {
 
                     Console.WriteLine("Valet ska anges i siffervärde, möjliga val 1-2-3.");
@@ -48,7 +55,11 @@ namespace E_ATM
                     Console.ReadKey();
                 }
                 else
+<<<<<<< HEAD
                 {  // testar validering, komentera bort hit om det inte funkar
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
                     MenuChoices MenuChoice = (MenuChoices)Enum.Parse(typeof(MenuChoices), choice);
 
                     switch (MenuChoice)
@@ -56,25 +67,17 @@ namespace E_ATM
                         case MenuChoices.UTTAG:
                             Console.WriteLine("UTTAG");
 
-                            Console.WriteLine("Ange det beloppet du vill ta ut!");
+                            Console.WriteLine("Tryck valfritt knapp får att gå vidare...");
                             double money = Convert.ToDouble(Console.ReadLine());
                             bool withdraw = bankClass.Withdrawn(money);
-                            if(withdraw && amountOfWithdrawnsLeft>0)
+                            if(withdraw)
                             {
-                                amountOfWithdrawnsLeft--;
-                                Console.WriteLine($"Du tog ut {money} kr! Ditt nya belopp är {bankClass.amountOfExistingMoney}\nDu har {amountOfWithdrawnsLeft} uttag kvar");
-                                
-                            }
-                            else if(amountOfWithdrawnsLeft==0)
-                            {
-                                Console.WriteLine("Du har överskridit antalet uttag!");
-                            }
-                            else
+                                Console.WriteLine($"Ditt tog ut {money} kr! Ditt nya belopp är {bankClass.amountOfMoney}");
+                            }else
                             {
                                 Console.WriteLine("Du har skrivit in ett ogiltigt belopp!");
                             }
 
-                            Console.ReadKey();
 
                             break;
 
@@ -85,11 +88,10 @@ namespace E_ATM
                             break;
 
                         case MenuChoices.INSÄTTNING:
-                            Console.WriteLine("Var god och ange insättningsbeloppet:");
+                            Console.Write("Var god och ange insättningsbeloppet:");
                             double amountOfMoney2 = double.Parse(Console.ReadLine());
                             double newBalance = bankClass.Deposit(amountOfMoney2);
                             Console.WriteLine($"Ditt nya belopp: {newBalance}");
-                            Console.ReadKey();
                             break;
                             
                         case MenuChoices.AVSLUTA:
@@ -103,7 +105,11 @@ namespace E_ATM
                             Console.ReadKey();
                             break;
                     }
+<<<<<<< HEAD
                  }
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
             }
 
         }

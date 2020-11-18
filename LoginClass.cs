@@ -2,8 +2,6 @@ using System;
 
 namespace E_ATM
 {
-
-    
     public class LoginClass : ILogin
     {
         public int pinNum { get; set; }
@@ -14,28 +12,36 @@ namespace E_ATM
         {
         }
 
-        public string VerifyCardNumber(int card)
+        public bool VerifyCardNumber(int cardNum)
         {
-             while (true)
+            if (this.cardNum == cardNum)
             {
-                card = int.Parse(Console.ReadLine());
-
-                if (cardNum == card)
-                {
-                    return "Grattis du kom in! Slå in din pinkod!";
-                }
-                else
-                {
-                    Console.WriteLine("Fel försök igen!");
-                }
-       
-        }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-         public string VerifyPin(int pin)
-         {
+        public bool VerifyPin()
+        {
+
+            if (pinNum == pinNum)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public string CheckAmountOfTries(int pin)
+        {
 
             amountOfTries = 0;
+
 
             while (true)
             {
@@ -43,7 +49,7 @@ namespace E_ATM
 
                 if (amountOfTries < 3 && pinNum == pin)
                 {
-                    return "Grattis du kom in!";
+                    return "Grattis du kom in";
 
                 }
                 else if (amountOfTries > 3)
@@ -60,7 +66,6 @@ namespace E_ATM
             }
 
 
-        
+        }
     }
-}
 }
