@@ -21,7 +21,7 @@ namespace E_ATM
         }
         public void ShowMenu()
         {
-            int amountOfWithdrawnsLeft = 5;
+           int amountOfWithdrawnsLeft=5;
             while (true)
             {
 
@@ -39,7 +39,7 @@ namespace E_ATM
                  Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
                  string choice = Console.ReadLine ();
 
-               int intChoice; 
+/*                int intChoice; 
                     if (!int.TryParse(choice, out intChoice))
                 {
 
@@ -48,7 +48,7 @@ namespace E_ATM
                     Console.ReadKey();
                 }
                 else
-                {  // testar validering, komentera bort hit om det inte funkar
+                { */ // testar validering, komentera bort hit om det inte funkar
                     MenuChoices MenuChoice = (MenuChoices)Enum.Parse(typeof(MenuChoices), choice);
 
                     switch (MenuChoice)
@@ -103,7 +103,7 @@ namespace E_ATM
                             Console.ReadKey();
                             break;
                     }
-                 }
+                // }
             }
 
         }
