@@ -21,7 +21,30 @@ namespace E_ATM
         }
         public void ShowMenu()
         {
+<<<<<<< HEAD
            int amountOfWithdrawnsLeft=5;
+=======
+<<<<<<< HEAD
+           int amountOfWithdrawnsLeft=5;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            int amountOfWithdrawnsLeft = 5;
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
+>>>>>>> 800a608741fb367bd3179866dd28b12347d44a32
             while (true)
             {
 
@@ -39,8 +62,38 @@ namespace E_ATM
                  Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
                  string choice = Console.ReadLine ();
 
+<<<<<<< HEAD
 /*                int intChoice; 
                     if (!int.TryParse(choice, out intChoice))
+=======
+<<<<<<< HEAD
+/*                int intChoice; 
+                    if (!int.TryParse(choice, out intChoice))
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+               int intChoice; 
+                    if (!int.TryParse(choice, out intChoice))
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
+>>>>>>> 800a608741fb367bd3179866dd28b12347d44a32
                 {
 
                     Console.WriteLine("Valet ska anges i siffervärde, möjliga val 1-2-3.");
@@ -48,7 +101,35 @@ namespace E_ATM
                     Console.ReadKey();
                 }
                 else
+<<<<<<< HEAD
                 { */ // testar validering, komentera bort hit om det inte funkar
+=======
+<<<<<<< HEAD
+                { */ // testar validering, komentera bort hit om det inte funkar
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                {  // testar validering, komentera bort hit om det inte funkar
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
+>>>>>>> 800a608741fb367bd3179866dd28b12347d44a32
                     MenuChoices MenuChoice = (MenuChoices)Enum.Parse(typeof(MenuChoices), choice);
 
                     switch (MenuChoice)
@@ -60,6 +141,7 @@ namespace E_ATM
                             double money = Convert.ToDouble(Console.ReadLine());
                             bool withdraw = bankClass.Withdrawn(money);
                             if(withdraw && amountOfWithdrawnsLeft>0)
+<<<<<<< HEAD
                             {
                                 amountOfWithdrawnsLeft--;
                                 Console.WriteLine($"Du tog ut {money} kr! Ditt nya belopp är {bankClass.amountOfExistingMoney}\nDu har {amountOfWithdrawnsLeft} uttag kvar");
@@ -67,6 +149,15 @@ namespace E_ATM
                             }
                             else if(amountOfWithdrawnsLeft==0)
                             {
+=======
+                            {
+                                amountOfWithdrawnsLeft--;
+                                Console.WriteLine($"Du tog ut {money} kr! Ditt nya belopp är {bankClass.amountOfExistingMoney}\nDu har {amountOfWithdrawnsLeft} uttag kvar");
+                                
+                            }
+                            else if(amountOfWithdrawnsLeft==0)
+                            {
+>>>>>>> 800a608741fb367bd3179866dd28b12347d44a32
                                 Console.WriteLine("Du har överskridit antalet uttag!");
                             }
                             else
@@ -103,7 +194,35 @@ namespace E_ATM
                             Console.ReadKey();
                             break;
                     }
+<<<<<<< HEAD
                 // }
+=======
+<<<<<<< HEAD
+                // }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                 }
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
+>>>>>>> 800a608741fb367bd3179866dd28b12347d44a32
             }
 
         }
