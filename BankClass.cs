@@ -6,6 +6,10 @@ namespace E_ATM
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        public int amountOfWithdrawn { get; set; }
+>>>>>>> parent of 0c56fa6... Commit changes
 =======
         public int amountOfWithdrawn { get; set; }
 >>>>>>> parent of 0c56fa6... Commit changes
@@ -26,6 +30,7 @@ namespace E_ATM
         {
 
             try
+<<<<<<< HEAD
             {
 <<<<<<< HEAD
                 amountOfExistingMoney -= amount;
@@ -40,6 +45,9 @@ namespace E_ATM
              
              if (amount <= amountOfExistingMoney)
 =======
+=======
+            {
+>>>>>>> parent of 0c56fa6... Commit changes
                 amountOfMoney -= amount;
             }
             catch (Exception e)
@@ -47,6 +55,9 @@ namespace E_ATM
 
 
             if (amount <= amountOfMoney)
+<<<<<<< HEAD
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
 >>>>>>> parent of 0c56fa6... Commit changes
             {
                 amountOfMoney -= amount;
@@ -56,8 +67,13 @@ namespace E_ATM
             {
                 return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
          
        
+=======
+            }
+
+>>>>>>> parent of 0c56fa6... Commit changes
 =======
             }
 
