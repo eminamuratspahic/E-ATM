@@ -23,7 +23,10 @@ namespace E_ATM
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             int amountOfWithdrawnsLeft = 5;
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
 =======
 >>>>>>> parent of 0c56fa6... Commit changes
 =======
@@ -47,8 +50,12 @@ namespace E_ATM
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                int intChoice; 
                     if (!int.TryParse(choice, out intChoice))
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
 =======
                 if (!int.TryParse(choice, out int output))
 >>>>>>> parent of 0c56fa6... Commit changes
@@ -64,7 +71,11 @@ namespace E_ATM
                 else
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {  // testar validering, komentera bort hit om det inte funkar
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
 =======
                 {
 >>>>>>> parent of 0c56fa6... Commit changes
@@ -118,7 +129,11 @@ namespace E_ATM
                     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                  }
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
 =======
                 }
 >>>>>>> parent of 0c56fa6... Commit changes
