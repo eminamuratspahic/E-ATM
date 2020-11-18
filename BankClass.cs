@@ -5,56 +5,58 @@ namespace E_ATM
     public class BankClass : IBank
     {
 
-        public int amountOfWithdrawn { get; set; }
+        //public int amountOfWithdrawnsLeft = 5;
         public int maxAmount { get; set; }
-        public double amountOfMoney { get; set; }
+        public double amountOfExistingMoney = 10000;
         public double amount { get; set; }
+        public double amountOfExisting {get; set;}
+
+
 
         public BankClass()
         {
         }
 
-        public double CheckAmountOfMoney()
+        public double CheckAmountOfExistingMoney()
         {
-            return amountOfMoney;
+            return amountOfExistingMoney;
         }
 
         public bool Withdrawn(double amount)
         {
 
-            try
+             try
             {
-                amountOfMoney -= amount;
-            }
-            catch (Exception e)
-            { throw new Exception(e.Message); }
-
-
-            if (amount <= amountOfMoney)
+             
+             if (amount <= amountOfExistingMoney)
             {
-                amountOfMoney -= amount;
+                amountOfExistingMoney -= amount;
                 return true;
             }
             else
             {
                 return false;
+            } 
             }
-
+            catch (Exception e)
+            { 
+                throw new Exception(e.Message);
+            } 
+       
 
         }
         public double Deposit(double amount)
         {
-
             try
             {
-                amountOfMoney += amount;
+                amountOfExistingMoney += amount;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            return amountOfMoney;
-
+            return amountOfExistingMoney;
+ 
         }
 
         public void CheckAmountOfWithdraw()
