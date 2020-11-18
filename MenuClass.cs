@@ -21,7 +21,26 @@ namespace E_ATM
         }
         public void ShowMenu()
         {
+<<<<<<< HEAD
            int amountOfWithdrawnsLeft=5;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            int amountOfWithdrawnsLeft = 5;
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
             while (true)
             {
 
@@ -39,8 +58,33 @@ namespace E_ATM
                  Console.WriteLine ("\nAnge ditt val : 1-3 :\n");
                  string choice = Console.ReadLine ();
 
+<<<<<<< HEAD
 /*                int intChoice; 
                     if (!int.TryParse(choice, out intChoice))
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+               int intChoice; 
+                    if (!int.TryParse(choice, out intChoice))
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                if (!int.TryParse(choice, out int output))
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
                 {
 
                     Console.WriteLine("Valet ska anges i siffervärde, möjliga val 1-2-3.");
@@ -48,7 +92,31 @@ namespace E_ATM
                     Console.ReadKey();
                 }
                 else
+<<<<<<< HEAD
                 { */ // testar validering, komentera bort hit om det inte funkar
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                {  // testar validering, komentera bort hit om det inte funkar
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                {
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
                     MenuChoices MenuChoice = (MenuChoices)Enum.Parse(typeof(MenuChoices), choice);
 
                     switch (MenuChoice)
@@ -103,7 +171,31 @@ namespace E_ATM
                             Console.ReadKey();
                             break;
                     }
+<<<<<<< HEAD
                 // }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                 }
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+=======
+                }
+>>>>>>> parent of 0c56fa6... Commit changes
+>>>>>>> e988461e5da731bd33e9205e5fbf6e4c668c502c
             }
 
         }
