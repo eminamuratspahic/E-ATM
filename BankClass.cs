@@ -27,7 +27,9 @@ namespace E_ATM
                 amountOfMoney -= amount;
             }
             catch (Exception e)
-            { throw new Exception(e.Message); }
+            {
+                throw new Exception(e.Message);
+            }
 
 
             if (amount <= amountOfMoney)
