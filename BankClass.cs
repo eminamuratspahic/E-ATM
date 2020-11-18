@@ -21,12 +21,12 @@ namespace E_ATM
             return amountOfExistingMoney;
         }
 
-        public bool Withdrawn(double amount)
+        public double Withdrawn(double amount)
         {
 
              try
             {
-                amountOfMoney -= amount;
+                amountOfExistingMoney -= amount;
             }
             catch (Exception e)
             {
@@ -34,7 +34,7 @@ namespace E_ATM
             }
 
 
-            if (amount <= amountOfMoney)
+            if (amount <= amountOfExistingMoney)
              
              if (amount <= amountOfExistingMoney)
             {
@@ -77,4 +77,5 @@ namespace E_ATM
 
     }
 
+}
 }

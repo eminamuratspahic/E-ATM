@@ -48,9 +48,3 @@ C:/Users/Jonny Phan/source/repos/E-ATM/obj/Debug/netcoreapp3.1/E-ATM.csproj.Core
 C:/Users/Jonny Phan/source/repos/E-ATM/obj/Debug/netcoreapp3.1/E-ATM.dll
 C:/Users/Jonny Phan/source/repos/E-ATM/obj/Debug/netcoreapp3.1/E-ATM.pdb
 C:/Users/Jonny Phan/source/repos/E-ATM/obj/Debug/netcoreapp3.1/E-ATM.genruntimeconfig.cache
-C:\Users\Jonny Phan\source\repos\E-ATM\obj\Debug\netcoreapp3.1\E-ATM.csprojAssemblyReference.cache
-C:\Users\Jonny Phan\source\repos\E-ATM\obj\Debug\netcoreapp3.1\E-ATM.AssemblyInfoInputs.cache
-C:\Users\Jonny Phan\source\repos\E-ATM\obj\Debug\netcoreapp3.1\E-ATM.AssemblyInfo.cs
-C:\Users\Jonny Phan\source\repos\E-ATM\obj\Debug\netcoreapp3.1\E-ATM.csproj.CoreCompileInputs.cache
-C:\Users\Jonny Phan\source\repos\E-ATM\obj\Debug\netcoreapp3.1\E-ATM.dll
-C:\Users\Jonny Phan\source\repos\E-ATM\obj\Debug\netcoreapp3.1\E-ATM.pdb
